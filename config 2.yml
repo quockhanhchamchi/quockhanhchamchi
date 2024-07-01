@@ -1,0 +1,251 @@
+# Please don't sell this as your own. Keeping this message is optional but leave it to support me. Thanks!
+# MADE BY ELEC
+# Youtube: https://www.youtube.com/@Eleciscool | Discord for support: @eleciscool | Server: discord.gg/Td5BGbxxZN
+# HELPFUL LINKS FOR CUSTOMIZING
+# Nice Font: https://allfancytext.com/minecraft-fancy-fonts-generator.html (9th font)
+# Gradient Generator: https://www.birdflop.com/resources/rgb/
+# Gradient Generator (Animated): https://www.birdflop.com/resources/animtab/
+# Hex Code Selector: https://htmlcolorcodes.com/
+# You need to install placeholder API as well as a few placeholders
+# Install video: https://youtu.be/R3k2QQ4EizI
+
+header-footer:
+  enabled: true
+  header:
+    - ""
+    # Go to the animations.yml file and use the Gradient Generator Animated (https://www.birdflop.com/resources/animtab/)to customize this logo.
+    - "%animation:ServerLogo%"
+    # Replace the gamemode of your server here
+    - "&7ʏᴏᴜ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ ᴏɴ &fɢᴀᴍᴇᴍᴏᴅᴇ"
+    - ""
+
+  # Modify these in the animations.yml file. 
+  footer:
+    - ""
+    - "%animation:InfoTurnstileLabels%"
+    - ""
+    - "%animation:InfoTurnstileInfoText%"
+    - "%animation:InfoTurnstileInfoLink%"
+    - ""
+    - "%animation:InfoTurnstileProgressBar%"
+  # NOTE: After you are done configuring this section, head down to the layout section. 
+
+  disable-condition: '%world%=disabledworld'
+  per-world:
+    world1:
+      header:
+      - an example of world with custom
+      footer:
+      - header/footer and prefix/suffix
+    world2;world3:
+      header:
+      - This is a shared header for
+      - world2 and world3
+  per-server:
+    server1:
+      header:
+      - an example of server with custom header
+tablist-name-formatting:
+  enabled: true
+  anti-override: true
+  disable-condition: '%world%=disabledworld'
+scoreboard-teams:
+  enabled: true
+  enable-collision: true
+  invisible-nametags: false
+  anti-override: true
+  sorting-types:
+  - GROUPS:owner,admin,mod,helper,builder,vip,default
+  - PLACEHOLDER_A_TO_Z:%player%
+  case-sensitive-sorting: true
+  can-see-friendly-invisibles: false
+  disable-condition: '%world%=disabledworld'
+  unlimited-nametag-mode:
+    enabled: false
+    disable-on-boats: true
+    disable-condition: '%world%=disabledworld'
+    dynamic-lines:
+    - abovename
+    - nametag
+    - belowname
+    - another
+    static-lines:
+      myCustomLine: 0.66
+playerlist-objective:
+  enabled: true
+  value: '%ping%'
+  fancy-value: '&7Ping: %ping%'
+  disable-condition: '%world%=disabledworld'
+belowname-objective:
+  enabled: false
+  number: '%health%'
+  text: '&cHealth'
+  fancy-display-players: '&c%health%'
+  fancy-display-default: NPC
+  disable-condition: '%world%=disabledworld'
+prevent-spectator-effect:
+  enabled: false
+bossbar:
+  enabled: false
+  toggle-command: /bossbar
+  remember-toggle-choice: false
+  hidden-by-default: false
+  bars:
+    ServerInfo:
+      style: PROGRESS
+      color: '%animation:barcolors%'
+      progress: '100'
+      text: '&fWebsite: &bwww.domain.com'
+scoreboard:
+  enabled: false
+  toggle-command: /sb
+  remember-toggle-choice: false
+  hidden-by-default: false
+  use-numbers: false
+  static-number: 0
+  delay-on-join-milliseconds: 0
+  respect-other-plugins: true
+  scoreboards:
+    scoreboard-1.20.3+:
+      title: <#E0B11E>MyServer</#FF0000>
+      display-condition: '%player-version-id%>=765'
+      lines:
+      - '&7%date%'
+      - '%animation:MyAnimation1%'
+      - '&6Online:'
+      - '* &eOnline&7:||%online%'
+      - '* &eCurrent World&7:||%worldonline%'
+      - '* &eStaff&7:||%staffonline%'
+      - ''
+      - '&6Personal Info:'
+      - '* &bRank&7:||%group%'
+      - '* &bPing&7:||%ping%&8ms'
+      - '* &bWorld&7:||%world%'
+      - '%animation:MyAnimation1%'
+    scoreboard:
+      title: <#E0B11E>MyServer</#FF0000>
+      lines:
+      - '&7%date%'
+      - '%animation:MyAnimation1%'
+      - '&6Online:'
+      - '* &eOnline&7: &f%online%'
+      - '* &eCurrent World&7: &f%worldonline%'
+      - '* &eStaff&7: &f%staffonline%'
+      - ''
+      - '&6Personal Info:'
+      - '* &bRank&7: &f%group%'
+      - '* &bPing&7: &f%ping%&8ms'
+      - '* &bWorld&7: &f%world%'
+      - '%animation:MyAnimation1%'
+# Configure this section to customize the layout!
+layout:
+  enabled: true
+  direction: COLUMNS
+  default-skin: mineskin:383747683
+  enable-remaining-players-text: true
+  remaining-players-text: '... and %s more'
+  empty-slot-ping-value: 0
+  layouts:
+    default:
+      fixed-slots:
+      # Be careful if you change these. To change the color, grab a hex code from this website: (https://htmlcolorcodes.com/) and use the find 
+      # tool to select all the codes #16D9f3 with your own. 
+      - '1|&#16D9F3ᴏɴʟɪɴᴇ ᴘʟᴀʏᴇʀꜱ|texture:597e4e27a04afa5f06108265a9bfb797630391c7f3d880d244f610bb1ff393d8'
+      - '2|&#16D9F3 - &7ᴛᴏᴛᴀʟ ᴘʟᴀʏᴇʀꜱ: &#16D9F3%online%'
+      - '3|&#16D9F3&m                          '
+      - '43|&#16D9F3&lʏᴏᴜʀ ꜱᴛᴀᴛɪꜱᴛɪᴄꜱ|texture:a988419dd5b386f698a96913db1d97c2418e16d416d7f439d48acd41e3a436ce'
+      - '45|&#16D9F3⚔&7 ᴋɪʟʟꜱ: &f%statistic_player_kills%'
+      - '46|&#16D9F3☠&7 ᴅᴇᴀᴛʜꜱ: &f%statistic_deaths%'
+      - '47|&#16D9F3🪙&7 ʙᴀʟᴀɴᴄᴇ: &f$%vault_eco_balance_formatted%&f'
+      - '48|&#16D9F3⛏&7 ʙʟᴏᴄᴋꜱ ʙʀᴏᴋᴇɴ: &f%statistic_mine_block%&f'
+      - '49|&#16D9F3⌚&7 ᴘʟᴀʏᴛɪᴍᴇ: &f%statistic_time_played%'
+      - '52|&#16D9F3&lꜱᴇʀᴠᴇʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ|texture:e82086d1545ae888aa766f8ed9c66e4755b42ed3a7be4e0cfa068d7f676d6df'
+      - '54|&#16D9F3🌊&7 ᴛᴘꜱ: &f%server_tps_1_colored%'
+      - '55|&#16D9F3☁&7 ʀᴀᴍ: &f%server_ram_used%&7/&f%server_ram_total%'
+      - '56|&#16D9F3☂&7 ᴜᴘᴛɪᴍᴇ: &f%server_uptime%'
+      - '57|&#16D9F3🏹&7 ꜱᴇʀᴠᴇʀ ᴠᴇʀꜱɪᴏɴ: &f%server_version%'
+      - '58|&#16D9F3☄&7 ᴏɴʟɪɴᴇ ᴘʟᴀʏᴇʀꜱ: &f%online%'
+      # Change this announcment to whatever you want!
+      - '63|&#16D9F3&lꜱᴇʀᴠᴇʀ ᴀɴɴᴏᴜɴᴄᴍᴇɴᴛꜱ'
+      - '65|&7ᴘᴜᴛ ᴀ ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ'
+      - '66|&7ʙᴜᴛ ᴅᴏɴ''ᴛ ᴍᴀᴋᴇ ɪᴛ ᴛᴏᴏ'
+      - '67|&7ʟᴏɴɢ ᴏʀ ᴇʟꜱᴇ ɪᴛ ᴡɪʟʟ'
+      - '68|&7ʟᴏᴏᴋ ʀᴇᴀʟʟʏ ᴡᴇɪʀᴅ'
+      - '69|&7ᴍᴀᴅᴇ ʙʏ &#1674F3@ᴇʟᴇᴄɪꜱᴄᴏᴏʟ'
+      groups:
+        players:
+          slots:
+          - 4-40
+ping-spoof:
+  enabled: false
+  value: 0
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+placeholder-output-replacements:
+  '%essentials_vanished%':
+    'yes': '&7| Vanished'
+    'no': ''
+  '%essentials_nickname%':
+    '%essentials_nickname%': '%player%'
+conditions:
+  nick:
+    conditions:
+    - '%player%=%essentials_nickname%'
+    true: '%player%'
+    false: ~%essentials_nickname%
+placeholderapi-refresh-intervals:
+  default-refresh-interval: 500
+  '%server_uptime%': 1000
+  '%server_tps_1_colored%': 1000
+  '%server_unique_joins%': 5000
+  '%player_health%': 200
+  '%player_ping%': 1000
+  '%vault_prefix%': 1000
+  '%rel_factionsuuid_relation_color%': 1000
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- Owner
+- Admin
+- Mod
+- Helper
+- default
+debug: false
+mysql:
+  enabled: false
+  host: 127.0.0.1
+  port: 3306
+  database: tab
+  username: user
+  password: password
+per-world-playerlist:
+  enabled: false
+  allow-bypass-permission: false
+  ignore-effect-in-worlds:
+  - ignoredworld
+  - build
+  shared-playerlist-world-groups:
+    lobby:
+    - lobby1
+    - lobby2
+    minigames:
+    - paintball
+    - bedwars
+global-playerlist:
+  enabled: false
+  display-others-as-spectators: false
+  display-vanished-players-as-spectators: true
+  isolate-unlisted-servers: false
+  spy-servers:
+  - spyserver1
+  - spyserver2
+  server-groups:
+    lobbies:
+    - lobby1
+    - lobby2
+    group2:
+    - server1
+    - server2
+use-bukkit-permissions-manager: false
+use-online-uuid-in-tablist: true
